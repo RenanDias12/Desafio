@@ -15,11 +15,11 @@ while True:
     btn.wait_for_press()
     s.send('Pressionado')
     serv_info = s.recv(4096)
-    if serv_info == 'led_on':
+    if serv_info == 'led_on': #Mensagem recebida pelo servidor
         ld.on()
 
     btn.wait_for_release()
     s.send('Solto')
     serv_info = s.recv(4096)
-    if serv_info == 'led_off':
+    if serv_info == 'led_off': #Mensagem recebida pelo servidor
         ld.off()
